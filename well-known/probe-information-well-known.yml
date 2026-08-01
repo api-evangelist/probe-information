@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/ on Probe42 hosts
+note: >-
+  No genuine .well-known discovery documents are published. probe42.in returns
+  302 redirects to the homepage for every /.well-known path, and api.probe42.in
+  (AWS API Gateway) returns 403 Forbidden. No 200 documents were saved.
+hosts:
+- host: https://probe42.in
+  documents:
+  - path: /.well-known/security.txt
+    status: 302
+  - path: /.well-known/openid-configuration
+    status: 302
+- host: https://apiportal.probe42.in
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+- host: https://api.probe42.in
+  documents:
+  - path: /.well-known/security.txt
+    status: 403

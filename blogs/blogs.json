@@ -1,0 +1,14 @@
+{
+  "repo": "probe-information",
+  "feeds": [
+    {
+      "source": "https://apiportal.probe42.in/v1/",
+      "feed_url": "https://apiportal.probe42.in/v1/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

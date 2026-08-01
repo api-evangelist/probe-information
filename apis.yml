@@ -1,8 +1,29 @@
 aid: probe-information
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/probe-information.png
 name: Probe Information
-description: 'Probe Information is a company surfaced as a portfolio company of accel and added to the
-  API Evangelist network as a stub for enrichment. Sector: services. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Probe Information Services (Probe42) is an Indian company-intelligence and
+  business-data platform that collects, cleans, and curates information on
+  roughly one million Indian companies from 743 public-domain sources through a
+  five-step verification process. Its products — Probe42 Business, Probe42
+  Banking, and the Probe42 API — deliver company profiles, financials, director
+  and charge data, and risk signals used by banks, NBFCs, fintechs, and sales
+  teams for onboarding, KYC/due-diligence, credit assessment, and lead
+  intelligence. The Probe42 API lets developers embed this company data directly
+  inside their own applications. Surfaced as an Accel portfolio company and
+  added to the API Evangelist network for enrichment; the public API surface is
+  gated behind developer-portal authentication.
 url: https://raw.githubusercontent.com/api-evangelist/probe-information/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +33,29 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-- Services
-apis: []
+- Business Intelligence
+- Company Data
+- Financial Data
+- Due Diligence
+- KYC
+- Banking
+- India
+apis:
+- name: Probe42 API
+  description: >-
+    The Probe42 API provides programmatic access to curated intelligence on
+    Indian companies — company profiles, financials, directors, and charges —
+    for embedding due-diligence and business-intelligence data inside partner
+    applications. Access is gated behind the Probe42 developer portal; no public
+    OpenAPI definition is published.
+  humanURL: https://probe42.in/products/api.html
+  baseURL: https://api.probe42.in
+  properties:
+  - type: DeveloperPortal
+    url: https://apiportal.probe42.in/v1/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,4 +63,27 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://www.probeinformation.com
+  url: https://probe42.in
+- type: DeveloperPortal
+  url: https://apiportal.probe42.in/v1/
+- type: Login
+  url: https://apiportal.probe42.in/v1/
+- type: Blog
+  url: https://resources.probe42.in/
+- type: Support
+  url: https://probe42.in/contactus.html
+- type: TermsOfService
+  url: https://probe42.in/terms.html
+- type: PrivacyPolicy
+  url: https://probe42.in/privacy.html
+- type: GitHubOrganization
+  url: https://github.com/probe42
+- type: LLMsTxt
+  url: llms/probe-information-llms.txt
+- type: DomainSecurity
+  url: security/probe-information-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
